@@ -1,6 +1,8 @@
 import assign from 'object-assign';
-import { PayloadSources } from '../constants/constants';
+import Constants from '../constants/constants';
 import { Dispatcher } from 'flux';
+
+const { PayloadSources } = Constants;
 
 export default assign(new Dispatcher(), {
   handleServerAction (action) {

@@ -14,7 +14,6 @@ const state = {
 };
 
 function setState (newState) {
-  console.log('set state');
   assign(state, newState);
   events.emit(CHANGE_EVENT);
 }
@@ -29,20 +28,16 @@ const ListStore = {
   },
 
   getState () {
-    console.log('get state', state);
     return state;
   }
 };
 
 ListStore.dispatchToken = AppDispatcher.register((payload) => {
   const action = payload.action;
-
-  console.log('dispatchToken', action);
-
   if (action.type === ActionTypes.LIST_LOADED) {
     setState({
       loaded: true,
-      items: action.list
+      items: action.items
     });
   }
 

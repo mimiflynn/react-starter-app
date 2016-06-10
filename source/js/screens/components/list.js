@@ -10,16 +10,14 @@ export class List extends Component {
   constructor (props) {
     super(props);
 
-    this.state = {
-      items: ListStore.getState()
-    };
+    this.state = ListStore.getState();
 
     this.handleStoreChange = this.handleStoreChange.bind(this);
   }
 
   componentDidMount () {
     ListStore.addChangeListener(this.handleStoreChange);
-    ViewActionCreators.loadOffers();
+    ViewActionCreators.loadList();
   }
 
   componentWillUnmount () {
@@ -27,7 +25,6 @@ export class List extends Component {
   }
 
   handleStoreChange () {
-    console.log('handleStoreChange');
     this.setState(ListStore.getState());
   }
 
