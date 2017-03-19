@@ -1,7 +1,7 @@
 {
   "name": "react-starter",
   "description": "React and webpack starter",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": {
     "name": "Mimi Flynn",
     "email": "mimiflynn@gmail.com"
@@ -12,6 +12,12 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:mimiflynn/react-starter.git"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.js --colors",
+    "dev": "webpack-dev-server --config webpack.config.js --hot --inline --colors --history-api-fallback",
+    "lint": "eslint ./; exit 0",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -34,15 +40,15 @@
     "eslint-loader": "^1.2.0",
     "eslint-plugin-jsx-a11y": "^0.6.2",
     "eslint-plugin-react": "^4.2.3",
-    "exports-loader": "^0.6.2",
-    "file-loader": "^0.8.4",
+    "exports-loader": "^0.6.4",
+    "file-loader": "^0.8.5",
     "imports-loader": "^0.6.5",
     "less": "^2.5.3",
     "less-loader": "^2.2.1",
     "node-sass": "^3.4.2",
-    "sass-loader": "^3.1.1",
+    "sass-loader": "^3.2.3",
     "style-loader": "^0.13.0",
-    "webpack": "^1.12.3",
-    "webpack-dev-server": "^1.12.1"
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.2"
   }
 }

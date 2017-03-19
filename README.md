@@ -5,7 +5,7 @@
 ```
 npm install -g webpack-dev-server
 npm install
-webpack-dev-server
+npm run dev
 ```
 
 Navigate to `http://localhost:8080/webpack-dev-server/` to view.
